@@ -1,4 +1,4 @@
-// === MAIN APPLICATION ===
+
 package com.ecommerce;
 
 import org.springframework.boot.SpringApplication;
@@ -11,7 +11,7 @@ public class EcommerceApplication {
     }
 }
 
-// === ENTITY: User ===
+
 package com.ecommerce.model;
 
 import jakarta.persistence.*;
@@ -29,8 +29,6 @@ public class User {
     private String password;
     private String role; // CUSTOMER or ADMIN
 }
-
-// === ENTITY: Product ===
 package com.ecommerce.model;
 
 import jakarta.persistence.*;
@@ -50,7 +48,7 @@ public class Product {
     private String category;
 }
 
-// === ENTITY: CartItem ===
+
 package com.ecommerce.model;
 
 import jakarta.persistence.*;
@@ -72,9 +70,7 @@ public class CartItem {
     private Product product;
 
     private int quantity;
-}
 
-// === ENTITY: Order ===
 package com.ecommerce.model;
 
 import jakarta.persistence.*;
@@ -101,7 +97,7 @@ public class Order {
     private List<CartItem> items;
 }
 
-// === REPOSITORIES ===
+
 package com.ecommerce.repository;
 
 import com.ecommerce.model.*;
@@ -125,7 +121,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     List<Order> findByUser(User user);
 }
 
-// === CONTROLLER: Product ===
+
 package com.ecommerce.controller;
 
 import com.ecommerce.model.Product;
